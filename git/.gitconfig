@@ -1,0 +1,126 @@
+[user]
+  email = your@email.com
+  name = "Your name"
+[alias]
+  b = branch -v
+  bd = branch -d
+  bD = branch -D
+  br = branch
+  ci = commit
+  cim = commit -m
+  cima = commit -am
+  co = checkout
+  cp = cherry-pick -x
+  d = diff -w
+  dc = diff --cached
+  nb = checkout -b
+  lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' -20
+  oups = commit --amend --no-edit
+  r = remote -v
+  rh = reset --hard
+  st = status -sb
+  t = tag -l
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+[color "branch"]
+  # Blue on black is hard to read in git branch -vv: use cyan instead
+  remote = cyan
+  upstream = cyan
+[core]
+  # End of lines conversion
+  autocrlf = false
+  # Editor is vim of course
+  editor = vim
+  # Include your global excludefile
+  excludefile = ~/.gitignore_global
+  # Don't paginate output by default
+  pager = cat
+  # Speed up the status command
+  untrackedCache = true
+  # Don't consider trailing space change as a cause for merge conflicts
+  whitespace = -trailing-space
+[credential]
+  # Cache the credentials for a short time.
+  # Can configure "--timeout=300" (in seconds, default at 900)
+  helper = cache
+[diff]
+  # Use better, descriptive initials (c, i, w) instead of a/b.
+  mnemonicPrefix = true
+  # Show renames/moves as such
+  renames = true
+  # Use vim for diff
+  tool = vimdiff
+  # Display submodule-related information (commit listings)
+  submodule = log
+  # When using --word-diff, assume --word-diff-regex=.
+  wordRegex = .
+[difftool]
+  # Doesn't prompt before each invocation of the diff tool
+  prompt = false
+[fetch]
+  # Auto-fetch submodule changes (sadly, won't auto-update)
+  recurseSubmodules = on-demand
+[grep]
+  # Consider most regexes to be ERE
+  extendedRegexp = true
+[help]
+  # Remplace the mistyped command in 0.1 seconds. 20 means two seconds
+  autocorrect = 1
+[log]
+  # Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+  abbrevCommit = true
+  # Automatically --follow the rename of a single file
+  follow = true
+[merge]
+  # Display common-ancestor blocks in conflict hunks
+  # conflictStyle = diff3
+[mergetool]
+  # Clean up backup files created by merge tools on tool exit
+  keepBackup = false
+  # Clean up temp files created by merge tools on tool exit
+  keepTemporaries = false
+  # Auto-accept file prompts when launching merge tools
+  prompt = false
+  # Put the temp files in a dedicated dir anyway
+  writeToTemp = true
+[pull]
+  # Preserve the history of everybody and avoid origin merge commits
+  rebase = preserve
+[push]
+  # Push local branches to remote branches with the same name. New setting since 2.0
+  default = simple
+  # When pushing, also push tags whose commit-ishs are now reachable upstream
+  followTags = true
+[rebase]
+  # Rebase with --autosquash "fixuped" commits
+  autoSquash = true
+[rerere]
+  # Update the index with the resulting content
+  autoupdate = true
+  # Activate recording of resolved conflicts
+  enabled = true
+[status]
+  # Recursively traverse untracked directories to display all contents
+  showUntrackedFiles = all
+  # Display submodule rev change summaries in status
+  submoduleSummary = true
+[tag]
+  # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+  sort = version:refname
+[versionsort]
+  # Sort versions when applicable
+  prereleaseSuffix = -pre
+  prereleaseSuffix = .pre
+  prereleaseSuffix = -beta
+  prereleaseSuffix = .beta
+  prereleaseSuffix = -rc
+  prereleaseSuffix = .rc
+
+# This part needs further tests  
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
