@@ -9,6 +9,7 @@
   ci = commit
   cim = commit -m
   cima = commit -am
+  clr = rm -r --cached
   co = checkout
   cp = cherry-pick -x
   d = diff -w
