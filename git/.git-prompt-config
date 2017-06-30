@@ -1,0 +1,38 @@
+# Insert this into your bash profile (located at ~/.profile)
+# config for git-prompt
+MAGENTA="\[\033[0;35m\]"
+YELLOW="\[\033[01;32m\]"
+BLUE="\[\033[00;34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[00m\]"
+RED="\[\033[0;31m\]"
+VIOLET='\[\033[01;35m\]'
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+function color_my_prompt {
+  local __user_and_host="$GREEN\u"
+  local __cur_location="$BLUE\w"
+  local __git_branch_color="$RED"
+  #local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+local __git_branch='$(__git_ps1 " (%s)")';
+  local __prompt_tail="$VIOLET$"
+  local __user_input_color="$GREEN"
+  export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__user_input_color "
+}
+color_my_prompt
+if ! shopt -oq posix; then
+  if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+  fi
+fi
+if [ -f ~/.git-prompt.sh ]; then
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWUPSTREAM="auto"
+  GIT_PS1_HIDE_IF_PWD_IGNORED=true
+  GIT_PS1_SHOWCOLORHINTS=true
+  . ~/.git-prompt.sh
+fi
