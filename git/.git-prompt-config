@@ -22,11 +22,11 @@ function color_my_prompt {
   if [[ "$(__git_ps1)" =~ "*" ]]; then           # if repository is dirty
      __git_branch_color="$RED"
   elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are untracked files
-     __git_branch_color="$YELLOW"
-  elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
      __git_branch_color="$BLUE"
+  elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
+     __git_branch_color="$YELLOW"
   elif [[ "$(__git_ps1)" =~ "=" ]]; then         # if local & remote branches are not ahead/behind
-     __git_branch_color="$GREEN"
+     __git_branch_color="$CYAN"
   fi
   local __prompt_tail="$VIOLET$"
   local __user_input_color="$GREEN"
