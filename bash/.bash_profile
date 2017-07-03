@@ -63,26 +63,31 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 function color_my_prompt {
   local __user_and_host="$GREEN\u" # \h =>to add host
   local __cur_location="$BLUE\W"   #capital 'W': current directory, small 'w':full file path
-  local __git_branch_color="$RED"
+  local __git_branch_color="$GREEN"
+  local __prompt_tail="$VIOLET$"
+  local __user_input_color="$GREEN"
   #local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
   #local __git_branch='$(__git_ps1 " (%s)")';
   local __git_branch='$(__git_ps1)';  
+
   # colour branch name depending on state
-  if [[ "$(__git_ps1)" =~ "*" ]]; then           # if repository is dirty
-     __git_branch_color="$RED"
-  elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are untracked files
-     __git_branch_color="$BLUE"
-  elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
-     __git_branch_color="$YELLOW"
-  elif [[ "$(__git_ps1)" =~ "=" ]]; then         # if local & remote branches are not ahead/behind
-     __git_branch_color="$CYAN"
-  fi
-  local __prompt_tail="$VIOLET$"
-  local __user_input_color="$GREEN"
+    if [[ "$(__git_ps1)" =~ "*" ]]; then           # if repository is dirty
+       __git_branch_color="$RED"
+    elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are only untracked files
+       __git_branch_color="$LIGHT_GRAY"
+    elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
+       __git_branch_color="$YELLOW"
+    elif [[ "$(__git_ps1)" =~ "+" ]]; then         # if there are staged files
+       __git_branch_color="$CYAN"
+    fi
+
+  # build prompt string
   PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
 }
 # call PROMPT_COMMAND which is executed before PS1
 export PROMPT_COMMAND=color_my_prompt
+
+# Uncomment below to use basic git-prompt (without colours)
 #export PROMPT_COMMAND='__git_ps1 "\u:\W" "$"'
 
 if [ -f ~/.git-prompt.sh ]; then
