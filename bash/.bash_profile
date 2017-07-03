@@ -53,7 +53,7 @@ MAGENTA="\[\033[0;35m\]"
 YELLOW="\[\033[01;32m\]"
 BLUE="\[\033[00;34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
-CYAN="\[\033[0;36m\]"
+CYAN="\[\033[01;36m\]"
 GREEN="\[\033[00m\]"
 RED="\[\033[0;31m\]"
 VIOLET='\[\033[01;35m\]'
@@ -79,7 +79,7 @@ function color_my_prompt {
   fi
   local __prompt_tail="$VIOLET$"
   local __user_input_color="$GREEN"
-  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch$__prompt_tail$__user_input_color "
+  PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
 }
 # call PROMPT_COMMAND which is executed before PS1
 export PROMPT_COMMAND=color_my_prompt
