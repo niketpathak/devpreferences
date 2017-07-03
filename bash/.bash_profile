@@ -73,10 +73,10 @@ function color_my_prompt {
   # colour branch name depending on state
     if [[ "$(__git_ps1)" =~ "*" ]]; then           # if repository is dirty
        __git_branch_color="$RED"
-    elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are only untracked files
-       __git_branch_color="$LIGHT_GRAY"
     elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
        __git_branch_color="$YELLOW"
+    elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are only untracked files
+       __git_branch_color="$LIGHT_GRAY"
     elif [[ "$(__git_ps1)" =~ "+" ]]; then         # if there are staged files
        __git_branch_color="$CYAN"
     fi
