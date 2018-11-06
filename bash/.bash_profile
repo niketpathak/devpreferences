@@ -51,11 +51,11 @@ fi
 
 # config for git-prompt
 MAGENTA="\[\033[0;35m\]"
-YELLOW="\[\033[01;32m\]"
+YELLOW="\[\033[01;33m\]"
 BLUE="\[\033[00;34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 CYAN="\[\033[01;36m\]"
-GREEN="\[\033[00m\]"
+GREEN="\[\033[00;32m\]"
 RED="\[\033[0;31m\]"
 VIOLET='\[\033[01;35m\]'
 export LS_OPTIONS='--color=auto'
