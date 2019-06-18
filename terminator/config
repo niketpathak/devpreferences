@@ -1,4 +1,7 @@
-#config file is usually located at ~/.config/terminator/config 
+# config file is usually located at ~/.config/terminator/config 
+# update directory to whatever working directory is desired
+# add command=/path/to/executable to execute an external program at launch
+# remove above/all comments from the config file 
 [global_config]
   suppress_multiple_term_dialog = True
 [keybindings]
@@ -39,21 +42,21 @@
       profile = default
       type = Terminal
       uuid = 301aad8b-2836-4185-8066-3f53314719bb
-      directory = /home/niketpathak/radiofrance/culturewww
+      directory = /home/userName/workingDirectory
     [[[terminal4]]]
       order = 1
       parent = child2
       profile = default
       type = Terminal
       uuid = d1ef54a7-00e1-44e9-a867-495f3bab7cd2
-      directory = /home/niketpathak/radiofrance/culturewww
+      directory = /home/userName/workingDirectory
     [[[terminal6]]]
       order = 0
       parent = child5
       profile = default
       type = Terminal
       uuid = c3be1f7d-2669-482e-b8d1-6e5d33c41b9e
-      directory = /home/niketpathak/radiofrance/culturewww
+      directory = /home/userName/workingDirectory
     [[[terminal7]]]
       order = 1
       parent = child5
