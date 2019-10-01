@@ -69,16 +69,16 @@ function color_my_prompt {
   local __user_input_color="$GREEN"
   #local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
   #local __git_branch='$(__git_ps1 " (%s)")';
-  local __git_branch='$(__git_ps1)';  
+  local __git_branch=$(__git_ps1);  
 
   # colour branch name depending on state
-    if [[ "$(__git_ps1)" =~ "*" ]]; then           # if repository is dirty
+    if [[ "${__git_branch}" =~ "*" ]]; then           # if repository is dirty
        __git_branch_color="$RED"
-    elif [[ "$(__git_ps1)" =~ "$" ]]; then         # if there is something stashed
+    elif [[ "${__git_branch}" =~ "$" ]]; then         # if there is something stashed
        __git_branch_color="$YELLOW"
-    elif [[ "$(__git_ps1)" =~ "%" ]]; then         # if there are only untracked files
+    elif [[ "${__git_branch}" =~ "%" ]]; then         # if there are only untracked files
        __git_branch_color="$LIGHT_GRAY"
-    elif [[ "$(__git_ps1)" =~ "+" ]]; then         # if there are staged files
+    elif [[ "${__git_branch}" =~ "+" ]]; then         # if there are staged files
        __git_branch_color="$CYAN"
     fi
 
