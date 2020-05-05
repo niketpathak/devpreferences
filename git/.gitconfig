@@ -86,7 +86,7 @@
   writeToTemp = true
 [pull]
   # Preserve the history of everybody and avoid origin merge commits
-  rebase = preserve
+  #rebase = preserve #deprecated
 [push]
   # Push local branches to remote branches with the same name. New setting since 2.0
   default = simple
