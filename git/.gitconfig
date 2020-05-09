@@ -43,7 +43,7 @@
 [credential]
   # Cache the credentials for a short time.
   # Can configure "--timeout=300" (in seconds, default at 900)
-  helper = cache --timeout= 36000  # save cache for 10 hrs
+  helper = cache --timeout=36000  # save cache for 10 hrs
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
   mnemonicPrefix = true
