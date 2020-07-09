@@ -2,6 +2,7 @@
   email = me@example.com
   name = your name
 [alias]
+  aa = add --all
   b = branch -v
   bd = branch -d
   bD = branch -D
