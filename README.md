@@ -3,4 +3,6 @@
 These are my personal preferences while doing development.
 
 #### The default .gitconfig file is located at *~/.gitconfig*.
-#### [Interesting article](http://digitalfortress.tech/tricks/creating-a-global-gitignore/) showcasing the setup of a *global .gitignore* file
+## [Reference article](http://digitalfortress.tech/tricks/creating-a-global-gitignore/) to setup a *global .gitignore* file
+
+## [Reference article](https://digitalfortress.tech/tutorial/create-global-gitconfig-git-alias/) to setup a *global .gitconfig* file as well as git alais
