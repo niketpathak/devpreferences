@@ -2,7 +2,7 @@
 
 These are my personal preferences while doing development.
 
-### The default .gitconfig file is located at *~/.gitconfig*.
+### The default .gitconfig file is located at *~/.gitconfig* (For Unix systems. See 2nd article for other OS).
 
 ### [Reference article](http://digitalfortress.tech/tricks/creating-a-global-gitignore/) to setup a **global .gitignore** file
 
