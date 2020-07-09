@@ -23,6 +23,7 @@
   t = tag -l
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
+  pushfl = push --force-with-lease
 [color "branch"]
   # Blue on black is hard to read in git branch -vv: use cyan instead
   remote = cyan
