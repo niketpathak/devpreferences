@@ -1,6 +1,6 @@
 [user]
-  email = niketpathak89@gmail.com
-  name = Niket Pathak
+  email = me@example.com
+  name = your name
 [alias]
   b = branch -v
   bd = branch -d
