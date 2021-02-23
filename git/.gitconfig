@@ -25,6 +25,7 @@
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
   pushfl = push --force-with-lease
+  pushflnv = push --force-with-lease --no-verify
 [color "branch"]
   # Blue on black is hard to read in git branch -vv: use cyan instead
   remote = cyan
