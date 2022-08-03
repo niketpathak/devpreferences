@@ -70,6 +70,8 @@
 [help]
   # Remplace the mistyped command in 0.1 seconds. 20 means two seconds
   autocorrect = 1
+[init]
+  defaultBranch = main
 [log]
   # Use abbrev SHAs whenever possible/relevant instead of full 40 chars
   abbrevCommit = true
