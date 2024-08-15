@@ -16,7 +16,7 @@
       parent = ""
       position = 1985:24
       size = 1855, 1056
-      title = /bin/bash
+      title = /bin/zsh
       type = Window
     [[[child1]]]
       order = 0
@@ -43,7 +43,6 @@
       type = Terminal
       uuid = 301aad8b-2836-4185-8066-3f53314719bb
       directory = /home/niketpathak
-      command = bash -l
     [[[terminal4]]]
       order = 1
       parent = child2
@@ -51,7 +50,6 @@
       type = Terminal
       uuid = d1ef54a7-00e1-44e9-a867-495f3bab7cd2
       directory = /home/niketpathak
-      command = bash -l
     [[[terminal6]]]
       order = 0
       parent = child5
@@ -59,7 +57,6 @@
       type = Terminal
       uuid = c3be1f7d-2669-482e-b8d1-6e5d33c41b9e
       directory = /home/niketpathak
-      command = bash -l
     [[[terminal7]]]
       order = 1
       parent = child5
@@ -67,7 +64,6 @@
       type = Terminal
       uuid = 1256729a-c031-4d26-bf71-16fd152a9b25
       directory = /home/niketpathak
-      command = bash -l
 [plugins]
 [profiles]
   [[default]]
