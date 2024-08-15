@@ -1,3 +1,4 @@
+##### Note: These aliases are shared with zsh aliases #####
 alias ll='ls -alFG'
 alias la='ls -AG'
 alias l='ls -CFG'
