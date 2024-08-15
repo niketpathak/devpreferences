@@ -1,7 +1,7 @@
-# config file is usually located at ~/.config/terminator/config 
+# config file is usually located at ~/.config/terminator/config
 # update directory to whatever working directory is desired
 # add command=/path/to/executable to execute an external program at launch
-# remove above/all comments from the config file 
+# remove above/all comments from the config file
 [global_config]
   suppress_multiple_term_dialog = True
 [keybindings]
@@ -73,5 +73,5 @@
   [[default]]
     background_darkness = 0.75
     cursor_color = "#aaaaaa"
-    scrollback_lines = 1500
+    scrollback_lines = 2500
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
