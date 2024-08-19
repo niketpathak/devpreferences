@@ -3,8 +3,22 @@
 # add command=/path/to/executable to execute an external program at launch
 # remove above/all comments from the config file
 [global_config]
+  window_state = maximise
+  extra_styling = False
+  title_hide_sizetext = True
+  enabled_plugins = ,
   suppress_multiple_term_dialog = True
+  title_use_system_font = False
+  title_font = UbuntuMono Nerd Font Mono 12
 [keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    cursor_color = "#aaaaaa"
+    font = UbuntuMono Nerd Font Mono 13
+    scrollback_lines = 3000
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child0]]]
@@ -43,6 +57,7 @@
       type = Terminal
       uuid = 301aad8b-2836-4185-8066-3f53314719bb
       directory = /home/niketpathak
+      command = ""
     [[[terminal4]]]
       order = 1
       parent = child2
@@ -50,6 +65,7 @@
       type = Terminal
       uuid = d1ef54a7-00e1-44e9-a867-495f3bab7cd2
       directory = /home/niketpathak
+      command = ""
     [[[terminal6]]]
       order = 0
       parent = child5
@@ -57,6 +73,7 @@
       type = Terminal
       uuid = c3be1f7d-2669-482e-b8d1-6e5d33c41b9e
       directory = /home/niketpathak
+      command = ""
     [[[terminal7]]]
       order = 1
       parent = child5
@@ -64,10 +81,5 @@
       type = Terminal
       uuid = 1256729a-c031-4d26-bf71-16fd152a9b25
       directory = /home/niketpathak
+      command = ""
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.75
-    cursor_color = "#aaaaaa"
-    scrollback_lines = 2500
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
