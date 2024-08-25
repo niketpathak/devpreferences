@@ -138,6 +138,7 @@ export LC_ALL='en_US.UTF-8';
 source $ZSH_CUSTOM/aliases.zsh
 alias reload='source ~/.zshrc'
 alias ls='lsd'
+alias lst='ls --tree'
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #

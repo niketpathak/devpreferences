@@ -26,6 +26,11 @@
   uncommit = reset --soft HEAD^
   pushfl = push --force-with-lease
   pushflnv = push --force-with-lease --no-verify
+  acim = "!f() { if [ -z \"$1\" ]; then echo 'Error: commit message is required'; return 1; fi; git add -A && git commit -m \"$1\"; }; f"
+  rcom = "!f() { git add --all && git commit --amend --no-edit && git push --force-with-lease; }; f"
+  rbi = "!f() { count=${1:-10}; git rebase -i HEAD~$count; }; f"
+  conb = "!f() { if [ -z \"$1\" ]; then echo 'Error: new branch name is required'; return 1; fi; git checkout -b \"$1\" && git push -u origin \"$1\"; }; f"
+  br-rm = "!f() { if [ -z \"$1\" ]; then echo 'Error: branch name is required'; return 1; fi; git branch -d \"$1\" && git push origin --delete \"$1\"; }; f"
 [color "branch"]
   # Blue on black is hard to read in git branch -vv: use cyan instead
   remote = cyan
@@ -122,7 +127,7 @@
   prereleaseSuffix = -rc
   prereleaseSuffix = .rc
 
-# This part needs further tests  
+# This part needs further tests
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f
