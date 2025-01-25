@@ -6,3 +6,4 @@ alias l='ls -CFG'
 alias webroot="cd /var/www/html"
 # your web config directory
 alias siteconfig="cd /etc/nginx/sites-available"
+alias kubectl='microk8s kubectl'
