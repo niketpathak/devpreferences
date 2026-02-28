@@ -73,7 +73,8 @@
   # Consider most regexes to be ERE
   extendedRegexp = true
 [help]
-  # Remplace the mistyped command in 0.1 seconds. 20 means two seconds
+  # Remplace the mistyped command automatically.
+  # In deciseconds (1 = 0.1s). Git 2.34+ also accepts: immediate, never, prompt
   autocorrect = 1
 [init]
   defaultBranch = main
@@ -85,6 +86,8 @@
 [merge]
   # Display common-ancestor blocks in conflict hunks
   # conflictStyle = diff3
+  # Note: Git 2.35+ supports zdiff3 which produces better conflict markers
+  # conflictStyle = zdiff3
 [mergetool]
   # Clean up backup files created by merge tools on tool exit
   keepBackup = false
@@ -98,7 +101,8 @@
   # Preserve the history of everybody and avoid origin merge commits
   rebase = true
 [push]
-  # Push local branches to remote branches with the same name. New setting since 2.0
+  # Push local branches to remote branches with the same name
+  # Note: "simple" has been the default since Git 2.0
   default = simple
   # When pushing, also push tags whose commit-ishs are now reachable upstream
   followTags = true
@@ -128,9 +132,6 @@
   prereleaseSuffix = .rc
 
 # This part needs further tests
-[filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f

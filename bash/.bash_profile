@@ -87,7 +87,9 @@ function color_my_prompt {
   PS1="$__user_and_host $__cur_location$__git_branch_color$__git_branch $__prompt_tail$__user_input_color "
 }
 
-# call PROMPT_COMMAND which is executed before PS1  # deprecated Aug 2024
+# call PROMPT_COMMAND which is executed before PS1
+# Deprecated: starship handles the prompt now. The color_my_prompt function
+# and color variables above are kept for reference but are no longer active.
 # export PROMPT_COMMAND=color_my_prompt
 
 if [ -f ~/.git-prompt.sh ]; then

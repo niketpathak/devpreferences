@@ -100,6 +100,8 @@ setopt hist_ignore_all_dups
 setopt correct
 
 # Append to the history file, rather than overwriting it
+# Note: share_history (set above) implies inc_append_history which supersedes this,
+# but keeping it explicit doesn't hurt
 setopt appendhistory
 
 # Extended globbing
@@ -112,7 +114,7 @@ setopt no_beep
 export EDITOR='nano'
 
 # prefer corepack version
-export PNPM_HOME="/home/niketpathak/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -120,7 +122,7 @@ esac
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads >
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
